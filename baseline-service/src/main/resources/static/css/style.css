@@ -1,0 +1,83 @@
+@charset "ISO-8859-1";
+
+html{
+	font-family: Ubuntu, Geneva, Tahoma, sans-serif;
+	/*background-color: gray;*/
+}
+
+.header{
+	
+}
+
+.header h1{
+	max-width: fit-content;
+	color: black;
+}
+
+.nav{
+	margin-top: 30px;
+	color: white;
+	font-size: 18px;
+	/*justify-items: center;*/
+	background-color: #0070ad;
+}
+
+.nav h4{
+	display: inline-block;
+	max-width: fit-content;
+	padding-left: 25px;
+	color: white;
+}
+
+.java{
+	margin-top: 30px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28px;
+  margin: 4px 2px;
+  margin-top: 40px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button1 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #0070ad;
+}
+
+.button1:hover {
+  background-color: #0070ad;
+  color: white;
+}
+
+.vendors, .services, .users {
+	margin-top: 30px;
+}
+
+.user, .form{
+	margin-top: 40px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
