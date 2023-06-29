@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Calculo de interes compuesto</title>
+</head>
+<body>
+    <div>
+        <center>
+            <h1>The Investor School - Calculo de interes compuesto</h1>
+        </center>
+    </div>
+
+    <div class="position-relative">
+        <center><a href="http://localhost:8080/"><h4>Regresar </h4></a></center>
+    </div>
+
+    <div class="mb-3 col-sm-3">
+        <form th:action = "@{BaselineService}" method="post" th:object = "${params}">
+            <div>
+                <label for="inversionInicial" class="form-label">Inversion Inicial:</label>
+                <input type="text" class="form-control" name="inversionInicial" th:field = "*{inversionInicial}"/>
+            </div>
+
+            <label for="aportacionAnual" class="form-label">Aportacion Anual:</label>
+            <input type="text" class="form-control" name="aportacionAnual" th:field = "*{aportacionAnual}"/>
+
+            <label for="porcentajeIncrementoAnual" class="form-label">% Incremento Anual:</label>
+            <input type="text" class="form-control" name="porcentajeIncrementoAnual" th:field = "*{porcentajeIncrementoAnual}"/>
+
+            <label for="aniosInversion" class="form-label">Años de Inversion:</label>
+            <input type="text" class="form-control" name="aniosInversion" th:field = "*{aniosInversion}"/>
+
+            <label for="rendimientoInversion" class="form-label">Rendimiento Inversion:</label>
+            <input type="text" class="form-control" name="rendimientoInversion" th:field = "*{rendimientoInversion}"/>
+
+            <br><br>
+            <button type="submit" class="btn btn-primary">Calcular</button>
+        </form>
+    </div>
+
+    <div>
+        <table class="table">
+            <tr>
+                <th scope="col">Ganancia por Inversion</th>
+                <th scope="col">Monto Final</th>
+            </tr>
+            <tr>
+                <td th:text ="${gananciaInversion}"></td>
+                <td th:text ="${montoFinal}"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table class = "table">
+            <tr>
+                <th scope="col">Año</th>
+                <th scope="col">Saldo Inicial</th>
+                <th scope="col">Aportacion</th>
+                <th scope="col">Rendimiento</th>
+                <th scope="col">Saldo Final</th>
+
+            </tr>
+            <tr>
+                <td th:text ="${anio}"></td>
+                <td th:text ="${saldoInicial}"></td>
+                <td th:text ="${aportacion}"></td>
+                <td th:text ="${rendimiento}"></td>
+                <td th:text ="${saldoFinal}"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>
